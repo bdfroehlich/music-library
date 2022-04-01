@@ -1,6 +1,6 @@
 const API_URL = `https://itunes.apple.com/search?term=`
-const fetchSearch = async (searchTerm) => {
-    const response = await fetch(API_URL + searchTerm);
+const fetchSearch = async (search) => {
+    const response = await fetch(API_URL + search);
     const resData = await response.json();
     return resData.results;
 }
@@ -12,7 +12,7 @@ const wrapPromise = (promise) => {
     //result will store the data we get from the promise return
     let result = '';
     //the suspender represents the resolution of the promise, a resolution should flag the status to success and catch set it to error
-    let suspender = promise.then(respone => {
+    let suspender = promise.then((response) => {
         status = 'success';
         result = response;
     }, err => {
@@ -36,9 +36,9 @@ const wrapPromise = (promise) => {
     }
 }
 
-export const createResource = (searchTerm) => {
+export const createResource = (search) => {
     return {
         //function takes searchTerm as an argument and returns an object with result as a property that has processed our API call
-        result: wrapPromise(fetchSearch(searchTerm))
+        result: wrapPromise(fetchSearch(search))
     }
 }
