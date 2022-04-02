@@ -5,10 +5,10 @@ function GalleryItem(props) {
     let [view, setView] = useState(false)
 
     const simpleStyle = {
-        'width': '25vw',
-        'height': '20vh',
-        'border': '1px solid black',
-        'margin': '2px'
+        'width': '30vw',
+        'height': '30vh',
+        'border': '2px solid black',
+        'margin': '5px'
     }
     
     const detailStyle = {

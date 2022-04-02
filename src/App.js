@@ -7,6 +7,7 @@ import ArtistView from './components/ArtistView'
 import { createResource as fetchData } from './helper'
 import LoadBar from './LoadBar'
 import { render } from '@testing-library/react'
+import './App.css'
 
 
 const App = () => {
@@ -42,7 +43,7 @@ const App = () => {
   }
 
   return (
-      <div>
+      <div className="App">
         {message}
         <Router>
             <Routes>
