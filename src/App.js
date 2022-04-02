@@ -6,7 +6,6 @@ import AlbumView from './components/AlbumView'
 import ArtistView from './components/ArtistView'
 import { createResource as fetchData } from './helper'
 import LoadBar from './LoadBar'
-import { render } from '@testing-library/react'
 import './App.css'
 
 
@@ -22,9 +21,9 @@ const App = () => {
       }
   }, [search])
 
-  const handleSearch = (e, term) => {
+  const handleSearch = (e, search) => {
       e.preventDefault()
-      setSearch(term)
+      setSearch(search)
   }
 
   //the first action Gallery makes upon the initial render of the page is to render "data"
@@ -57,7 +56,7 @@ const App = () => {
                 <Route path="/album/:id" element={
                     <AlbumView />
                 } />
-                 <Route path="/artist/:id" element={
+                <Route path="/artist/:id" element={
                     <ArtistView />
                 } />
             </Routes>

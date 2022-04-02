@@ -1,6 +1,7 @@
 const API_URL = 'https://itunes.apple.com/search?term='
 
 const fetchSearch = async (search) => {
+    // console.log(API_URL + search)
     const response = await fetch(API_URL + search)
     const resData = await response.json()
     return resData.results
