@@ -49,7 +49,7 @@ const App = () => {
                 <Route path="/album/:id" element={
                     <AlbumView />
                 } />
-                 <Route path="/arist/:id" element={
+                 <Route path="/artist/:id" element={
                     <ArtistView />
                 } />
             </Routes>
