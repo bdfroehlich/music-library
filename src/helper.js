@@ -36,3 +36,10 @@ const wrapPromise = (promise) => {
         }
     }
 }
+
+//exported function that takes the search as an argument and returns an object with a result property
+export const createResource = (search) => {
+    return {
+        result: wrapPromise(fetchSearch(search))
+    }
+}
