@@ -37,13 +37,13 @@ function GalleryItem(props) {
                 <h2>{props.item.trackName}</h2>
                 <h3>
                     {/* link to artistId by clicking on rendered artistName */}
-                    <Link to={`/arist/${props.item.artistId}`}>
+                    <Link to={`/artist/${props.item.artistId}`}>
                         {props.item.artistName}
                     </Link>
                 </h3>
                 <h3>
                     {/* link to collectionId/album by clicking on rendered collectionName/album */}
-                    <Link to={`/arist/${props.item.collectionId}`}>
+                    <Link to={`/album/${props.item.collectionId}`}>
                         {props.item.collectionName}
                     </Link>
                 </h3>
