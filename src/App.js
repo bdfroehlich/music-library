@@ -36,11 +36,24 @@ const App = () => {
 
   return (
       <div>
-          <SearchBar handleSearch={handleSearch} />
-          {message}
-          <Gallery data={data} />
-          <AlbumView />
-          <AristView />
+        {message}
+        <Router>
+            <Routes>
+                <Route path="/" element={
+                    //shorthand Fragment to place more than one element in a component <></>
+                    <>
+                        <SearchBar handleSearch={handleSearch} />
+                        <Gallery data={data} />
+                    </>
+                } />
+                <Route path="/album/:id" element={
+                    <AlbumView />
+                } />
+                 <Route path="/arist/:id" element={
+                    <ArtistView />
+                } />
+            </Routes>
+        </Router>
       </div>
   )
 }

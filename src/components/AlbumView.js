@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default Albumview = () => {
+function Albumview () {
     const [ albumData, setAlbumData ] = useState([]);
 
     return (
@@ -11,3 +11,5 @@ export default Albumview = () => {
         </div>
     )
 }
+
+export default Albumview

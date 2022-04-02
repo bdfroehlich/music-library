@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default Artistview = () => {
+function Artistview () {
     const [ artistData, setArtistData ] = useState([]);
 
     return (
@@ -11,3 +11,5 @@ export default Artistview = () => {
         </div>
     )
 }
+
+export default Artistview
